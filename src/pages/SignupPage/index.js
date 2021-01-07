@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { useState } from 'react';
-import styles from './SignupPage.module.css';
+import { signup } from '../../services/userService';
+import './SignupPage.css';
 
 function SignupPage(props) {
     const [formState, setFormState] = useState({
@@ -25,11 +27,17 @@ function SignupPage(props) {
         }));
     };
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        console.log('submitted form data', formState);
-        setFormState({getInitialFormState});
-        props.history.push('/dashboard');
+    async function handleSubmit(event) {
+        try {
+            event.preventDefault();
+
+            await signup(formState);
+
+            setFormState({getInitialFormState});
+            props.history.push('/dashboard');
+        } catch (error) {
+            alert(error.message);
+        };
     };
 
     return(

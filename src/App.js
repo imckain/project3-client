@@ -1,3 +1,10 @@
+import { Switch, Route } from 'react-router-dom';
+
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
+import DashboardPage from './pages/DashboardPage';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -7,7 +14,22 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <p>Project 3</p>
+        <main>
+          <Switch>
+            <Route exact path='/' render={props =>
+              <HomePage />
+            } />
+            <Route exact path='/login' render={props =>
+              <LoginPage />
+            } />
+            <Route exact path='/signup' render={props =>
+              <SignupPage />
+            } />
+            <Route exact path='/dashboard' render={props =>
+              <DashboardPage />
+            } />
+          </Switch>
+        </main>
       <Footer />
     </div>
   );

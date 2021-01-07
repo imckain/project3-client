@@ -1,0 +1,15 @@
+.SignupPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form > input {
+    margin-bottom: 5px;
+}

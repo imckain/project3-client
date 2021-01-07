@@ -13,9 +13,26 @@
 .Header > nav > ul {
     display: flex;
     list-style: none;
-    margin-right: 15px;
 }
 
 .Header > nav > ul li {
     margin-right: 15px;
+}
+
+.NavLink {
+    text-decoration: none;
+    color: white;
+}
+.NavLink:hover {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.NavLink:active {
+    text-decoration: none;
+    color: white;
+}
+.NavLink:visited {
+    text-decoration: none;
+    color: white;
 }

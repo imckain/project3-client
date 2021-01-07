@@ -6,13 +6,23 @@ function Header(props) {
 
     return (
         <header className={styles.Header}>
-            <h1>Project 3</h1>
+            <Link to="/" className={styles.NavLink}>
+                <h1>Project 3</h1>
+            </Link>
             <nav>
                 <ul>
-                    <li>Login</li>
-                    <li>Logout</li>
-                    <li>Signup</li>
-                    <li>Dashboard</li>
+                    <li>
+                        <Link to="/login" className={styles.NavLink}>Login</Link>
+                    </li>
+                    <li>
+                        <Link to="" className={styles.NavLink}>Logout</Link>
+                    </li>
+                    <li>
+                        <Link to="/signup" className={styles.NavLink}>Signup</Link>
+                    </li>
+                    <li>
+                        <Link to="/dashboard" className={styles.NavLink}>Dashboard</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

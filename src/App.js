@@ -23,10 +23,10 @@ function App() {
               <LoginPage />
             } />
             <Route exact path='/signup' render={props =>
-              <SignupPage />
+              <SignupPage {...props} />
             } />
             <Route exact path='/dashboard' render={props =>
-              <DashboardPage />
+              <DashboardPage {...props} />
             } />
           </Switch>
         </main>

@@ -1,0 +1,51 @@
+.SplashScreenContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10%;
+}
+
+.SplashScreenBanner {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    border: 3px solid red;
+    height: 60vh;
+    width: 100%;
+}
+
+.SplashScreenOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.SplashScreenButton {
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    padding: 15px;
+}
+
+.SplashScreenGallery {
+    width: 80%;
+    height: auto;
+}
+
+.HomeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid red;
+    height: max-content;
+}
+
+.About {
+
+}

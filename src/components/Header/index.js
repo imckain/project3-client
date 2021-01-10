@@ -11,18 +11,26 @@ function Header(props) {
             </Link>
             <nav>
                 <ul>
-                    <li>
-                        <Link to="/login" className={styles.NavLink}>Login</Link>
-                    </li>
-                    <li>
-                        <Link to="" className={styles.NavLink}>Logout</Link>
-                    </li>
-                    <li>
-                        <Link to="/signup" className={styles.NavLink}>Signup</Link>
-                    </li>
-                    <li>
-                        <Link to="/dashboard" className={styles.NavLink}>Dashboard</Link>
-                    </li>
+                    {
+                        props.user ?
+                        <>
+                            <li>
+                                <Link to="/dashboard" className={styles.NavLink}>Dashboard</Link>
+                            </li>
+                            <li>
+                                <Link to="" onClick={props.handleLogout} className={styles.NavLink}>Logout</Link>
+                            </li>
+                        </>
+                        :
+                        <>
+                            <li>
+                                <Link to="/login" className={styles.NavLink}>Login</Link>
+                            </li>
+                            <li>
+                                <Link to="/signup" className={styles.NavLink}>Signup</Link>
+                            </li>
+                        </>
+                    }
                 </ul>
             </nav>
         </header>

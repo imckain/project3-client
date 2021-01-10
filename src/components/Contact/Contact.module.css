@@ -1,0 +1,20 @@
+.Contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContactContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+}
+
+.ContactForm {
+    width: 60vw;
+}
+
+.ContactCard {
+}

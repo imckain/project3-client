@@ -7,14 +7,7 @@
 
 .ContactContent {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 100vw;
-}
-
-.ContactForm {
-    width: 60vw;
-}
-
-.ContactCard {
 }

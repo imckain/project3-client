@@ -16,6 +16,14 @@ import './App.css';
 
 function App(props) {
 
+  const [listingState, setListingState] = useState({
+    photo: "",
+    price: "",
+    sqft: "",
+    bed: "",
+    bath: "",
+  });
+
   const [userState, setUserState] = useState({
     user: getUser()
   });

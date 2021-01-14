@@ -1,0 +1,58 @@
+.ContactCard {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.Realtor {
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    justify-content: space-between;
+}
+
+.RealtorImg {
+    border-radius: 50%;
+    height: 150px;
+}
+
+.PhoneIcon {
+    width: 70px;
+    height: 70px;
+    color: #21a4d4;
+}
+
+.MailIcon {
+    width: 70px;
+    color: #21a4d4;
+}
+
+.PhoneAndEmail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 47px;
+    margin-top: 20px;
+}
+
+.PhoneAndEmail > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.PhoneAndEmail > div > p {
+    margin-left: 65px;
+}
+
+.PhoneAndEmail > div > div > p {
+    margin-left: 65px;
+}
+
+.PhoneContact {
+    display: flex;
+    flex-direction: column;
+}

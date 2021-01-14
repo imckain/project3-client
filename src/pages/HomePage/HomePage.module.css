@@ -4,8 +4,16 @@
     width: 100%;
     justify-content: center;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
     margin-bottom: 10%;
+    box-sizing: border-box;
+    border: 3px solid #343342d5;
+    border-radius: 30px;
+    background-color: #343342b5;
+    width: 40rem;
+    height: 200px;
 }
 
 .SplashScreenBanner {
@@ -13,9 +21,23 @@
     position: relative;
     display: inline-block;
     justify-content: center;
-    border: 3px solid red;
     height: 60vh;
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: changeBkg;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 40s;
+    animation-direction: normal;
+}
+
+@keyframes changeBkg {
+    0%, 15%, 100% {background-image: url('./images/image1.jpg');}
+    20%, 35% {background-image: url('./images/image2.jpg');}
+    40%, 55% {background-image: url('./images/image3.jpg');}
+    60%, 75% {background-image: url('./images/image4.jpg');}
+    80%, 95% {background-image: url('./images/image5.jpg');}
 }
 
 .SplashScreenOverlay {
@@ -35,17 +57,4 @@
 .SplashScreenGallery {
     width: 80%;
     height: auto;
-}
-
-.HomeContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid red;
-    height: max-content;
-}
-
-.About {
-
 }

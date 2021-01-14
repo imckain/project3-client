@@ -1,3 +1,8 @@
+:root {
+  --accent-color: #343342;
+  --accent-color-2: #CD011F;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

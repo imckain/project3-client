@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom';
 
 import styles from './Header.module.css'
 
+import Logo from './images/logo1.png'
+
 function Header(props) {
 
     return (
         <header className={styles.Header}>
             <Link to="/" className={styles.NavLink}>
-                <h1>Project 3</h1>
+                <img className={styles.Logo} src={Logo} />
             </Link>
             <nav>
                 <ul>
@@ -15,19 +17,19 @@ function Header(props) {
                         props.user ?
                         <>
                             <li>
-                                <Link to="/dashboard" className={styles.NavLink}>Dashboard</Link>
+                                <Link to="/dashboard" className={styles.NavLinkDashboard}>Dashboard</Link>
                             </li>
                             <li>
-                                <Link to="" onClick={props.handleLogout} className={styles.NavLink}>Logout</Link>
+                                <Link to="" onClick={props.handleLogout} className={styles.NavLinkLogout}>Logout</Link>
                             </li>
                         </>
                         :
                         <>
                             <li>
-                                <Link to="/login" className={styles.NavLink}>Login</Link>
+                                <Link to="/login" className={styles.NavLinkLogin}>Login</Link>
                             </li>
                             <li>
-                                <Link to="/signup" className={styles.NavLink}>Signup</Link>
+                                <Link to="/signup" className={styles.NavLinkSignup}>Sign up</Link>
                             </li>
                         </>
                     }

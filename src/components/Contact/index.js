@@ -1,5 +1,5 @@
-import ContactCard from '../ContactCard/'
-import ContactForm from '../ContactForm/'
+import ContactCard from './ContactCard'
+import ContactForm from './ContactForm'
 
 import styles from './Contact.module.css';
 

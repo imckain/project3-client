@@ -3,11 +3,16 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 140px;
     padding: 0 15px;
-    background-color: black;
-    color: white;
-    box-shadow: 3px 3px 5px 3px lightgray;
+    background-color: white;
+    color: var(--accent-color);
+    border-bottom: 2px solid #34334283;
+}
+
+.Logo {
+    width: 396px;
+    height: 118px;
 }
 
 .Header > nav > ul {
@@ -19,20 +24,96 @@
     margin-right: 15px;
 }
 
-.NavLink {
+.NavLinkLogin {
+    text-decoration: none;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.NavLinkLogin:hover {
+    text-decoration: none;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+.NavLinkLogin:active {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+.NavLinkLogin:visited {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.NavLinkSignup {
     text-decoration: none;
     color: white;
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: var(--accent-color);
 }
-.NavLink:hover {
+.NavLinkSignup:hover {
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
-.NavLink:active {
+.NavLinkSignup:active {
     text-decoration: none;
     color: white;
 }
-.NavLink:visited {
+.NavLinkSignup:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.NavLinkDashboard {
+    text-decoration: none;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.NavLinkDashboard:hover {
+    text-decoration: none;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+.NavLinkDashboard:active {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+.NavLinkDashboard:visited {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.NavLinkLogout {
+    text-decoration: none;
+    color: white;
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: var(--accent-color);
+}
+.NavLinkLogout:hover {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.NavLinkLogout:active {
+    text-decoration: none;
+    color: white;
+}
+.NavLinkLogout:visited {
     text-decoration: none;
     color: white;
 }

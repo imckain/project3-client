@@ -1,13 +1,16 @@
 import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { getUser, logout } from './services/userService';
+import { getListings } from './services/listingService';
 
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import DashboardPage from './pages/DashboardPage';
 import ListingsPage from './pages/ListingsPage';
+import CreateListing from './pages/CreateListingPage';
+import EditListing from './pages/EditListingPage';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -15,14 +18,27 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App(props) {
-
-  const [listingState, setListingState] = useState({
-    photo: "",
-    price: "",
-    sqft: "",
-    bed: "",
-    bath: "",
+  const [listings, setListings] = useState({
+      photo: "",
+      price: "",
+      sqft: "",
+      bed: "",
+      bath: "",
   });
+
+  useEffect(() => {
+    async function getListingData() {
+      const { data } = await getListings();
+      setListings([{
+        photo: data.photo,
+        price: data.price,
+        sqft: data.sqft,
+        bed: data.bed,
+        bath: data.bath,
+      }])
+    }
+    getListingData()
+  }, [])
 
   const [userState, setUserState] = useState({
     user: getUser()
@@ -65,12 +81,34 @@ function App(props) {
             } />
             <Route exact path='/dashboard' render={props =>
               userState.user ?
-                <DashboardPage {...props} />
+                <DashboardPage 
+                  {...props}
+                  isAdmin={userState.user.isAdmin}
+                  listings={listings}
+                />
               :
                 <Redirect to='/login' />
             } />
             <Route exact path='/listings' render={props =>
-              <ListingsPage />
+              <ListingsPage 
+                {...props}
+                listings={listings}
+                photo={listings.photo}
+                price={listings.price}
+                sqft={listings.sqft}
+                bed={listings.bed}
+                bath={listings.bath}
+              />
+            } />
+            <Route exact path='/create' render={props =>
+              <CreateListing 
+                {...props}
+              />
+            } />
+            <Route exact path='/edit/:id' render={props =>
+              <EditListing 
+                {...props}
+              />
             } />
           </Switch>
         </main>

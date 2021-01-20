@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+.Contact > h1 {
+    color: var(--accent-color);
+}
+
 .ContactContent {
     display: flex;
     flex-direction: row;

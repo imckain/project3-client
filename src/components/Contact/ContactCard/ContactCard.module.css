@@ -8,7 +8,19 @@
     display: flex;
     flex-direction: row;
     width: 30vw;
-    justify-content: space-between;
+    justify-content: flex-start;
+}
+
+.Realtor > div {
+    margin-left: 30px;
+}
+
+.Realtor > div > h2 {
+    color: var(--accent-color);
+}
+
+.Realtor > div > p {
+    color: #626262;
 }
 
 .RealtorImg {
@@ -45,14 +57,21 @@
 }
 
 .PhoneAndEmail > div > p {
+    color: var(--accent-color);
+    font-weight: 700;
     margin-left: 65px;
 }
 
 .PhoneAndEmail > div > div > p {
+    color: var(--accent-color);
+    font-weight: 700;
+    margin: 3px 0 3px 0;
     margin-left: 65px;
 }
 
 .PhoneContact {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }

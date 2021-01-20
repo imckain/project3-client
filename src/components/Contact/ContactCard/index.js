@@ -11,21 +11,21 @@ function ContactCard(props) {
             <div className={styles.Realtor}>
                 <img className={styles.RealtorImg} src={realtorImg} alt="realtor" />
                 <div>
-                    <h3>Tim Heidecker</h3>
+                    <h2>Tim Heidecker</h2>
                     <p>Free Real Estate INC.</p>
                     <p>License #5030008671</p>
                 </div>
             </div>
             <div className={styles.PhoneAndEmail}>
                 <div>
-                    <img className={styles.PhoneIcon} src={phoneIcon} />
+                    <img className={styles.PhoneIcon} src={phoneIcon} alt="phone icon" />
                     <div className={styles.PhoneContact}>
                         <p>Mobile: (555) 555-1234</p>
                         <p>Office: (555) 555-5678</p>
                     </div>
                 </div>
                 <div>
-                    <img className={styles.MailIcon} src={mailIcon} />
+                    <img className={styles.MailIcon} src={mailIcon} alt="email icon" />
                     <p>Email: tim.heidecker@fre.com</p>
                 </div>
             </div>

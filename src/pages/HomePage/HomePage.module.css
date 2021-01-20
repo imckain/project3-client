@@ -23,8 +23,10 @@
     justify-content: center;
     height: 60vh;
     width: 100%;
+    background-color: #34334249;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-position: 50% 50%;
     animation-name: changeBkg;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;

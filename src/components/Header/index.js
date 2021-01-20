@@ -9,7 +9,7 @@ function Header(props) {
     return (
         <header className={styles.Header}>
             <Link to="/" className={styles.NavLink}>
-                <img className={styles.Logo} src={Logo} />
+                <img className={styles.Logo} src={Logo} alt="logo" />
             </Link>
             <nav>
                 <ul>

@@ -2,7 +2,7 @@ function ListingCard(props) {
 
     return(
         <div>
-            <img src={props.photo} />
+            <img src={props.photo} alt="home" />
             <span>Price: {props.price} </span>
             <span>Square Footage: {props.sqft} </span>
             <span>Bed: {props.bedrooms} </span>
@@ -10,3 +10,5 @@ function ListingCard(props) {
         </div>
     );
 };
+
+export default ListingCard;

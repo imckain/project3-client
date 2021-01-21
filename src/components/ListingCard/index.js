@@ -5,8 +5,8 @@ function ListingCard(props) {
             <img src={props.photo} alt="home" />
             <span>Price: {props.price} </span>
             <span>Square Footage: {props.sqft} </span>
-            <span>Bed: {props.bedrooms} </span>
-            <span>Bath: {props.bathrooms} </span>
+            <span>Bed: {props.bed} </span>
+            <span>Bath: {props.bath} </span>
         </div>
     );
 };

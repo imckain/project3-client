@@ -9,8 +9,8 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import DashboardPage from './pages/DashboardPage';
 import ListingsPage from './pages/ListingsPage';
-import CreateListing from './pages/CreateListingPage';
-import EditListing from './pages/EditListingPage';
+// import CreateListing from './pages/CreateListingPage';
+// import EditListing from './pages/EditListingPage';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -18,24 +18,12 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App(props) {
-  const [listings, setListings] = useState({
-      photo: "",
-      price: "",
-      sqft: "",
-      bed: "",
-      bath: "",
-  });
-
+  const [listingsData, setListingsData] = useState({});
+  
   useEffect(() => {
     async function getListingData() {
-      const { data } = await getListings();
-      setListings([{
-        photo: data.photo,
-        price: data.price,
-        sqft: data.sqft,
-        bed: data.bed,
-        bath: data.bath,
-      }])
+      const data = await getListings();
+      setListingsData(data)
     }
     getListingData()
   }, [])
@@ -84,7 +72,7 @@ function App(props) {
                 <DashboardPage 
                   {...props}
                   isAdmin={userState.user.isAdmin}
-                  listings={listings}
+                  listings={listingsData}
                 />
               :
                 <Redirect to='/login' />
@@ -92,15 +80,10 @@ function App(props) {
             <Route exact path='/listings' render={props =>
               <ListingsPage 
                 {...props}
-                listings={listings}
-                photo={listings.photo}
-                price={listings.price}
-                sqft={listings.sqft}
-                bed={listings.bed}
-                bath={listings.bath}
+                listings={listingsData}
               />
             } />
-            <Route exact path='/create' render={props =>
+            {/* <Route exact path='/create' render={props =>
               <CreateListing 
                 {...props}
               />
@@ -109,7 +92,7 @@ function App(props) {
               <EditListing 
                 {...props}
               />
-            } />
+            } /> */}
           </Switch>
         </main>
       <Footer />

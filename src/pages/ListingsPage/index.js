@@ -5,18 +5,20 @@ function ListingsPage(props) {
 
     return(
         <div>
-            {
-                props.listings.map(props => (
+            <h1>listings</h1>
+            {console.log(props.listings)}
+            {/* {
+                props.listings.map(listing => (
                     <ListingCard  
-                        key={props.listings._id}
-                        photo={props.listings.photo}
-                        price={props.listings.price}
-                        sqft={props.listings.sqft}
-                        bed={props.listings.bed}
-                        bath={props.listings.bath}
+                        key={listing.id}
+                        photo={listing.photo}
+                        price={listing.price}
+                        sqft={listing.sqft}
+                        bed={listing.bed}
+                        bath={listing.bath}
                     />
                 ))
-            }
+            } */}
         </div>
     );
 };

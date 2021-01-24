@@ -1,0 +1,132 @@
+.EditListingMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url('../AdminPage/admin-background/bkg1.jpg');
+}
+
+.EditFormMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    width: 40%;
+    background-color: white;
+}
+
+.EditListingHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+    border-bottom: 2px solid #34334283;
+    background-color: #252525cc;
+    box-shadow: 2px 2px 7px 7px #34334283;
+}
+
+.EditListingHeader > h1 {
+    color: white;
+    font-size: 60px;
+}
+
+.EditListingForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.EditFormItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.EditFormAddressItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.EditFormItem > label {
+    display: flex;
+    color: #666767;
+    margin-right: 15px;
+    width: fit-content;
+    flex-wrap: nowrap;
+}
+
+.EditFormInput {
+    background: none;
+    border: 1px solid #C9D2D3;
+    border-radius: 5px;
+    height: 35px;
+    width: 340px;
+    margin: 10px 20px 0 20px;
+}
+
+.EditFormMessage {
+    background: none;
+    border: 1px solid #C9D2D3;
+    border-radius: 5px;
+    width: 33rem;
+    height: 150px;
+    margin: 10px 20px 20px 20px;
+}
+
+.EditFormButtonItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.EditFormButton {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.EditFormAdditionalItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    color: #666767;
+}
+
+.EditFormAdditionalItems > label {
+    font-size: xx-large;
+    margin-bottom: 20px;
+}
+
+.EditFormCheckboxItem {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.EditFormCheckbox {
+    background: none;
+    border: 1px solid #C9D2D3;
+    border-radius: 5px;
+}

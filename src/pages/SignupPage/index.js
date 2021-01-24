@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import { signup } from '../../services/userService';
-import './SignupPage.css';
+import styles from './SignupPage.module.css';
 
 function SignupPage(props) {
     const [formState, setFormState] = useState({
@@ -44,39 +44,45 @@ function SignupPage(props) {
     };
 
     return(
-        <div className="Page">
-            <h1>Signup</h1>
-            <form onSubmit={handleSubmit}>
-                <input
-                    value={formState.firstName}
-                    onChange={handleChange}
-                    name="firstName" 
-                    type="text" 
-                    placeholder="First Name"
-                />
-                <input 
-                    value={formState.lastName} 
-                    onChange={handleChange} 
-                    name="lastName" 
-                    type="text" 
-                    placeholder="Last Name"
-                />
-                <input 
-                    value={formState.email} 
-                    onChange={handleChange} 
-                    name="email" 
-                    type="email"
-                    placeholder="Email"
-                />
-                <input 
-                    value={formState.password} 
-                    onChange={handleChange} 
-                    name="password" 
-                    type="password" 
-                    placeholder="Password"
-                />
-                <button>Sign Up</button>
-            </form>
+        <div className={styles.SignupPage}>
+            <div className={styles.SignupPageContent}>
+                <h1>S I G N &nbsp;&nbsp; U P</h1>
+                <form className={styles.SignupPageForm} onSubmit={handleSubmit}>
+                    <input
+                        value={formState.firstName}
+                        onChange={handleChange}
+                        name="firstName" 
+                        type="text" 
+                        placeholder=" F I R S T &nbsp; N A M E"
+                        className={styles.SignupPageInput}
+                    />
+                    <input 
+                        value={formState.lastName} 
+                        onChange={handleChange} 
+                        name="lastName" 
+                        type="text" 
+                        placeholder=" L A S T &nbsp; N A M E"
+                        className={styles.SignupPageInput}
+                    />
+                    <input 
+                        value={formState.email} 
+                        onChange={handleChange} 
+                        name="email" 
+                        type="email"
+                        placeholder=" E M A I L"
+                        className={styles.SignupPageInput}
+                    />
+                    <input 
+                        value={formState.password} 
+                        onChange={handleChange} 
+                        name="password" 
+                        type="password" 
+                        placeholder=" P A S S W O R D"
+                        className={styles.SignupPageInput}
+                    />
+                    <button className={styles.SignupPageButton}>S I G N &nbsp;&nbsp; U P</button>
+                </form>
+            </div>
         </div>
     );
 };

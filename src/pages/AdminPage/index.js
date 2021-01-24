@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import styles from './AdminPage.module.css';
+
 import ListingCard from '../../components/ListingCard';
 
 import { deleteListing, getListings } from '../../services/listingService';
@@ -42,38 +44,41 @@ function AdminPage(props) {
         <div>
             {
                 props.isAdmin ?
-                <div>
-                    <h1>Admin Page</h1>
-                    <div>
-                        <ul>
-                            <li>
-                                <Link to="/listings">View Listings</Link>
-                            </li>
-                            <li>
-                                <Link to="/create">Create Listing</Link>
-                            </li>
-                        </ul>
+                <div className={styles.AdminPage}>
+                    <div className={styles.AdminHeader}>
+                        <h1>A D M I N &nbsp; C O N S O L E </h1>
+                        <div>
+                            <Link to="/create" className={styles.NavLinkCreate}>Create Listing</Link>
+                            <Link to="/listings" className={styles.NavLinkListings}>User View</Link>
+                        </div>
                     </div>
-                    { listingsData.length > 0 &&
-                        listingsData.map(listing => (
-                            <div key={listing._id}>
-                                <ListingCard 
-                                    photo={listing.photo}
-                                    price={listing.price}
-                                    sqft={listing.sqft}
-                                    bed={listing.bed}
-                                    bath={listing.bath}
-                                />
-                                <button type='submit' onClick={() => handleDeleteAndRefresh(listing._id)} >X</button>
-                                <Link to={{
-                                        pathname: `/listings/${listing._id}`,
-                                        listingProps:{
-                                            id: listing._id
-                                        }
-                                }}>Edit</Link>
-                            </div>
-                        ))
-                    }
+                    <div className={styles.ListingsContent}>
+                        { listingsData.length > 0 &&
+                            listingsData.map(listing => (
+                                <div className={styles.Listing} key={listing._id}>
+                                    <div>
+                                        <ListingCard 
+                                            className={styles.ListingCard}
+                                            photo={listing.photo}
+                                            price={listing.price}
+                                            sqft={listing.sqft}
+                                            bed={listing.bed}
+                                            bath={listing.bath}
+                                        />
+                                        <button type='submit' onClick={() => handleDeleteAndRefresh(listing._id)} >X</button>
+                                    </div>
+                                    <Link 
+                                        className={styles.NavLinkEditListing} 
+                                        to={{
+                                            pathname: `/listings/${listing._id}`,
+                                            listingProps:{
+                                                id: listing._id
+                                            }
+                                        }}>E D I T</Link>
+                                </div>
+                            ))
+                        }
+                    </div>
                 </div>
                 :
                 <DashboardPage />

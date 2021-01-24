@@ -16,7 +16,7 @@ function signup(user) {
         // error handling
         throw new Error('Email already taken');
     }).then(data => setToken(data.token));
-}
+};
 
 function login(credentials) {
     return fetch(BASE_URL + '/login', {
@@ -30,15 +30,15 @@ function login(credentials) {
         // error handling
         throw new Error('Invalid Login');
     }).then(data => setToken(data.token));
-}
+};
 
 function logout() {
     removeToken();
-}
+};
 
 function getUser() {
     return getUserFromToken();
-}
+};
 
 export {
     signup,

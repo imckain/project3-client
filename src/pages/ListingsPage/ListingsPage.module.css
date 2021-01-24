@@ -1,0 +1,41 @@
+.ListingsPageHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+    border-bottom: 2px solid #34334283;
+    background-color: #252525cc;
+    box-shadow: 2px 2px 7px 7px #34334283;
+}
+
+.ListingsPageHeader > h1 {
+    color: white;
+    font-size: 60px;
+}
+
+.ListingsPageMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url('./images/bkg2.jpg');
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: 50% 50%;
+}
+
+.ListingsPageContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 80vh;
+    background-color: white;
+    border-left: 4px solid var(--accent-color);
+    border-right: 4px solid var(--accent-color);
+}
+
+.ListingCard {
+    margin: 10px;
+}

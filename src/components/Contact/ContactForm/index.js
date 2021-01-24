@@ -12,7 +12,7 @@ function ContactForm(props) {
                         // value='firstName'
                         name='firstName'
                         type='text'
-                        placeholder='First Name'
+                        placeholder=''
                     />
                 </div>
                 <div className={styles.ContactFormItem}>
@@ -22,7 +22,7 @@ function ContactForm(props) {
                         // value='lastName'
                         name='lastName'
                         type='text'
-                        placeholder='Last Name'
+                        placeholder=''
                     />
                 </div>
                 <div className={styles.ContactFormItem}>
@@ -32,7 +32,7 @@ function ContactForm(props) {
                         // value='phoneNumber'
                         name='phoneNumber'
                         type='text'
-                        placeholder='Phone Number'
+                        placeholder=''
                     />
                 </div>
                 <div className={styles.ContactFormItem}>
@@ -42,7 +42,7 @@ function ContactForm(props) {
                         // value='email'
                         name='email'
                         type='email'
-                        placeholder='Email'
+                        placeholder=''
                     />
                 </div>
                 <div className={styles.ContactFormItem}>

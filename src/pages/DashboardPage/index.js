@@ -4,7 +4,7 @@ function DashboardPage(props) {
     
     return(
         <div>
-            {
+            { 
                 props.isAdmin ?
                 <AdminPage 
                     {...props} 

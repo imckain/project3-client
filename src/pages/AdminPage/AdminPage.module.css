@@ -1,0 +1,149 @@
+.AdminHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 40px 0;
+    padding: 0px 15px;
+    border-bottom: 2px solid #34334283;
+    background-color: #252525cc;
+    box-shadow: 2px 2px 7px 7px #34334283;
+}
+
+.AdminHeader > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 15px;
+}
+
+.AdminHeader > div > a {
+    margin-left: 20px;
+}
+
+.AdminHeader > h1 {
+    color: white;
+    font-size: 60px;
+    margin-left: 15px;
+}
+
+.NavLinkCreate {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: large;
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+}
+.NavLinkCreate:hover {
+    text-decoration: none;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+.NavLinkCreate:active {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+.NavLinkCreate:visited {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.NavLinkListings {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    border: 2px solid var(--accent-color-2);
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: var(--accent-color-2);
+}
+.NavLinkListings:hover {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.NavLinkListings:active {
+    text-decoration: none;
+    color: white;
+}
+.NavLinkListings:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.ListingsContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+
+.Listing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: fit-content;
+}
+
+.Listing > div {
+    position: relative;
+    display: inline-block;
+}
+
+.Listing > div > button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    background: var(--accent-color-2);
+    border: var(--accent-color-2);
+    border-radius: 50%;
+    font-size: large;
+    font-weight: 600;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    color: white;
+    text-shadow: 1px 3px 2px #34334283;
+    box-shadow: 0 2px 3px 2px #34334283;
+}
+
+.NavLinkEditListing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 40px;
+    margin: 0 10px 0 10px;
+    background-color: var(--accent-color-2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 800;
+}
+
+.NavLinkEditListing:hover {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.NavLinkEditListing:active {
+    text-decoration: none;
+    color: white;
+}
+.NavLinkEditListing:visited {
+    text-decoration: none;
+    color: white;
+}

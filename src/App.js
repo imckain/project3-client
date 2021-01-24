@@ -25,9 +25,9 @@ function App(props) {
   useEffect(() => {
     async function getListingData() {
       const data = await getListings();
-      setListingsData(data)
+      setListingsData(data);
     }
-    getListingData()
+    getListingData();
   }, []);
 
   const [userState, setUserState] = useState({
@@ -82,6 +82,7 @@ function App(props) {
               userState.user ?
                 <DashboardPage 
                   {...props}
+                  user={userState.user}
                   isAdmin={userState.user.isAdmin}
                   listings={listingsData}
                   refresh={refreshData}
@@ -96,17 +97,23 @@ function App(props) {
               />
             } />
             <Route exact path='/create' render={props =>
-              <CreateListing 
-                {...props}
-                refresh={refreshData}
-              />
+              userState.user ?
+                <CreateListing 
+                  {...props}
+                  refresh={refreshData}
+                />
+              :
+                <Redirect to='/login' />
             } />
             <Route exact path='/listings/:id' render={props =>
-              <EditListing 
-                {...props}
-                listing={listingsData}
-                refresh={refreshData}
-              />
+              userState.user ?
+                <EditListing 
+                  {...props}
+                  listing={listingsData}
+                  refresh={refreshData}
+                />
+              :
+                <Redirect to='/login' />
             } />
           </Switch>
         </main>

@@ -20,7 +20,7 @@ function deleteListing(id) {
     fetch(BASE_URL + '/api/listings/' + id, {
         method: 'DELETE'
     });
-}
+};
 
 function updateListing(listing, id) {
     fetch(BASE_URL + '/api/listings/' + id, {
@@ -42,4 +42,4 @@ export {
     createListing,
     deleteListing,
     updateListing,
-}
+};

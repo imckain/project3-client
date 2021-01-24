@@ -42,27 +42,29 @@ function LoginPage(props) {
     };
 
     return(
-        <div className="Page">
-            <h1>Login</h1>
-            <form className={styles.LoginPageForm} onSubmit={handleSubmit}>
-                <input 
-                    value={formState.email} 
-                    onChange={handleChange} 
-                    name="email" 
-                    type="email"
-                    placeholder="Email"
-                    className={styles.LoginPageInput}
-                />
-                <input 
-                    value={formState.password} 
-                    onChange={handleChange} 
-                    name="password" 
-                    type="password" 
-                    placeholder="Password"
-                    className={styles.LoginPageInput}
-                />
-                <button className={styles.LoginPageButton} >Login</button>
-            </form>
+        <div className={styles.LoginPage}>
+            <div className={styles.LoginPageContent}>
+                <h1>L O G I N</h1>
+                <form className={styles.LoginPageForm} onSubmit={handleSubmit}>
+                    <input 
+                        value={formState.email} 
+                        onChange={handleChange} 
+                        name="email" 
+                        type="email"
+                        placeholder=" E M A I L "
+                        className={styles.LoginPageInput}
+                    />
+                    <input 
+                        value={formState.password} 
+                        onChange={handleChange} 
+                        name="password" 
+                        type="password" 
+                        placeholder=" P A S S W O R D "
+                        className={styles.LoginPageInput}
+                    />
+                    <button className={styles.LoginPageButton} >L O G I N</button>
+                </form>
+            </div>
         </div>
     );
 };

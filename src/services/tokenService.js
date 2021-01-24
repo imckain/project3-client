@@ -9,12 +9,12 @@ function setToken(token) {
 
 function removeToken() {
     localStorage.removeItem('token');
-}
+};
 
 function getUserFromToken() {
     const token = getToken();
     return token ? JSON.parse(atob(token.split('.')[1])).user : null;
-}
+};
 
 function getToken() {
     const token = localStorage.getItem('token');
@@ -23,14 +23,14 @@ function getToken() {
         if(payload.exp < Date.now() / 1000) {
             removeToken();
             token = null;
-        }
-    }
+        };
+    };
     return token;
-}
+};
 
 export {
     setToken,
     removeToken,
     getUserFromToken,
     getToken
-}
+};

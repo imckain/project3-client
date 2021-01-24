@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getListings } from '../../services/listingService';
+import styles from './ListingsPage.module.css';
+
 import ListingCard from '../../components/ListingCard';
 
 function ListingsPage(props) {
@@ -16,20 +18,28 @@ function ListingsPage(props) {
     }, []);
 
     return(
-        <div>
-            <h1>listings</h1>
-            { listingsData.length > 0 &&
-                listingsData.map(listing => (
-                    <ListingCard  
-                        key={listing._id}
-                        photo={listing.photo}
-                        price={listing.price}
-                        sqft={listing.sqft}
-                        bed={listing.bed}
-                        bath={listing.bath}
-                    />
-                ))
-            }
+        <div className={styles.ListingsPage}>
+            <div className={styles.ListingsPageHeader}>
+                <h1>L I S T I N G S</h1>
+            </div>
+            <div className={styles.ListingsPageMain}>
+                <div className={styles.ListingsPageContent}>
+                    { listingsData.length > 0 &&
+                        listingsData.map(listing => (
+                            <div key={listing._id} className={styles.ListingCard}>
+                                <ListingCard  
+                                    key={listing._id}
+                                    photo={listing.photo}
+                                    price={listing.price}
+                                    sqft={listing.sqft}
+                                    bed={listing.bed}
+                                    bath={listing.bath}
+                                />
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
         </div>
     );
 };

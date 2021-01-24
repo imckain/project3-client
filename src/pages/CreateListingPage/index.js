@@ -21,13 +21,13 @@ function CreateListing(props) {
         try {
             event.preventDefault();
 
-            setFormState(event)
-            await createListing(formState)
-            props.history.push('/dashboard')
-            props.refresh()
+            setFormState(event);
+            await createListing(formState);
+            props.history.push('/dashboard');
+            props.refresh();
         } catch (error) {
-            alert(error.message)
-        }
+            alert(error.message);
+        };
     };
 
     return(

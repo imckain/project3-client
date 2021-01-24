@@ -18,7 +18,7 @@ function SignupPage(props) {
             email: "",
             password: "",
         });
-    }
+    };
 
     function handleChange(event) {
         setFormState(prevState => ({
@@ -78,7 +78,7 @@ function SignupPage(props) {
                 <button>Sign Up</button>
             </form>
         </div>
-    )
-}
+    );
+};
 
 export default SignupPage;

@@ -1,11 +1,42 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ListingCard from '../../components/ListingCard';
 
-import { deleteListing } from '../../services/listingService';
+import { deleteListing, getListings } from '../../services/listingService';
 
 import DashboardPage from "../DashboardPage";
 
 function AdminPage(props) {
+    const [listingsData, setListingsData] = useState({
+
+    });
+    
+    useEffect(() => {
+      async function getListingData() {
+        const data = await getListings();
+        setListingsData(data);
+      }
+      getListingData();
+    }, []);
+
+    async function handleDeleteAndRefresh(id) {
+        handleDelete(id);
+        await getListings();
+        refreshData();
+    };
+
+    function handleDelete(id) {
+        deleteListing(id);
+    };
+
+    async function refreshData() {
+        try {
+          const data = await getListings();
+          setListingsData(data);
+        } catch (error) {
+          console.log(error);
+        };
+    };
 
     return(
         <div>
@@ -23,8 +54,8 @@ function AdminPage(props) {
                             </li>
                         </ul>
                     </div>
-                    { props.listings.length > 0 &&
-                        props.listings.map(listing => (
+                    { listingsData.length > 0 &&
+                        listingsData.map(listing => (
                             <div key={listing._id}>
                                 <ListingCard 
                                     photo={listing.photo}
@@ -33,7 +64,7 @@ function AdminPage(props) {
                                     bed={listing.bed}
                                     bath={listing.bath}
                                 />
-                                <button type='submit' onClick={() => {deleteListing(listing._id); props.refresh()}}  >X</button>
+                                <button type='submit' onClick={() => handleDeleteAndRefresh(listing._id)} >X</button>
                                 <Link to={{
                                         pathname: `/listings/${listing._id}`,
                                         listingProps:{

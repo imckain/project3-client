@@ -16,7 +16,7 @@ function LoginPage(props) {
             email: "",
             password: "",
         });
-    }
+    };
 
     function handleChange(event) {
         setFormState(prevState => ({
@@ -64,7 +64,7 @@ function LoginPage(props) {
                 <button className={styles.LoginPageButton} >Login</button>
             </form>
         </div>
-    )
-}
+    );
+};
 
 export default LoginPage;

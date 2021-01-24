@@ -22,13 +22,13 @@ function EditListing(props) {
         try {
             event.preventDefault();
 
-            setFormState(event)
-            await updateListing(formState, props.location.listingProps.id)
-            props.history.push('/dashboard')
+            setFormState(event);
+            await updateListing(formState, props.location.listingProps.id);
+            props.history.push('/dashboard');
             props.refresh();
         } catch (error) {
-            alert(error.message)
-        }
+            alert(error.message);
+        };
     };
 
     return(

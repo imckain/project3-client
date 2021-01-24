@@ -1,33 +1,73 @@
-// import { useForm } from 'react-hook-form';
-// import { useHistory } from 'react-router-dom';
-// import { createListing } from '../../services/listingService';
+import { useState } from 'react';
+import { createListing } from '../../services/listingService';
 
-// function CreateListing(props) {
-//     const {register, handleSubmit} = useForm();
-//     const history = useHistory()
+function CreateListing(props) {
+    const [formState, setFormState] = useState({
+        photo: '',
+        price: '',
+        sqft: '',
+        bed: '',
+        bath: '',
+    });
 
-//     const submitHandler = handleSubmit((data) => {
-//         onSubmit(data)
-//     })
+    function handleChange(event) {
+        setFormState(prevState => ({
+            ...prevState,
+            [event.target.name]: event.target.value
+        }));
+    };
 
-//     const onSubmit = async (data) => {
-//         await createListing(data)
-//         history.push('/dashboard')
-//     };
+    async function handleSubmit(event) {
+        try {
+            event.preventDefault();
 
-//     return(
-//         <div>
-//             <h3>Create a Listing</h3>
-//             <form onSubmit={submitHandler}>
-//                 <input ref={register} type='text' name='photo' id='text' />
-//                 <input ref={register} type='text' name='price' id='text' />
-//                 <input ref={register} type='text' name='sqft' id='text' />
-//                 <input ref={register} type='text' name='bed' id='text' />
-//                 <input ref={register} type='text' name='bath' id='text' />
-//                 <button type='submit' value='Add Listing' />
-//             </form>
-//         </div>
-//     );
-// };
+            setFormState(event)
+            await createListing(formState)
+            props.history.push('/dashboard')
+            props.refresh()
+        } catch (error) {
+            alert(error.message)
+        }
+    };
 
-// export default CreateListing;
+    return(
+        <div>
+            <h3>Create a Listing</h3>
+            <form onSubmit={handleSubmit}>
+                <input 
+                    value={formState.photo}
+                    onChange={handleChange}
+                    type='text' 
+                    name='photo' 
+                />
+                <input 
+                    value={formState.price}
+                    onChange={handleChange}
+                    type='text'     
+                    name='price'    
+                />
+                <input 
+                    value={formState.sqft}
+                    onChange={handleChange}
+                    type='text'     
+                    name='sqft'     
+                />
+                <input 
+                    value={formState.bed}
+                    onChange={handleChange}
+                    type='text'     
+                    name='bed'  
+                />
+                <input 
+                    value={formState.bath}
+                    onChange={handleChange}
+                    type='text'     
+                    name='bath'     
+                />
+                <button type='submit' value='Create Listing' />
+            </form>
+        </div>
+    );
+};
+
+export default CreateListing;

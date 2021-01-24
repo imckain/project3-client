@@ -1,29 +1,74 @@
-// import { useRouteMatch } from 'react-router-dom';
-// import { useHistory } from 'react-router-dom';
-// import { updateListing } from '../../services/listingService';
+/* eslint-disable no-unused-vars */
+import { useState } from 'react';
+import { getListings, updateListing } from '../../services/listingService';
 
-// function EditListing(props) {
-//     const match = useRouteMatch();
-//     const history = useHistory()
+function EditListing(props) {
+    const [formState, setFormState] = useState({
+        photo: '',
+        price: '',
+        sqft: '',
+        bed: '',
+        bath: '',
+    });
 
-//     const onSubmit = async (data) => {
-//         await updateListing(data, match.params.id)
-//         history.push('/dashboard')
-//     }
+    function handleChange(event) {
+        setFormState(prevState => ({
+            ...prevState,
+            [event.target.name]: event.target.value
+        }));
+    };
 
-//     return(
-//         <div>
-//             <h3>Edit Listing</h3>
-//             <form onSubmit={onSubmit}>
-//                 <input type='text' name='photo' id='text' />
-//                 <input type='text' name='price' id='text' />
-//                 <input type='text' name='sqft' id='text' />
-//                 <input type='text' name='bed' id='text' />
-//                 <input type='text' name='bath' id='text' />
-//                 <button type='submit' value='Add Listing' />
-//             </form>
-//         </div>
-//     );
-// };
+    async function handleSubmit(event) {
+        try {
+            event.preventDefault();
 
-// export default EditListing;
+            setFormState(event)
+            await updateListing(formState, props.location.listingProps.id)
+            props.history.push('/dashboard')
+            props.refresh();
+        } catch (error) {
+            alert(error.message)
+        }
+    };
+
+    return(
+        <div>
+            <h3>Edit Listing</h3>
+            <form onSubmit={handleSubmit}>
+                <input 
+                    value={formState.photo}
+                    onChange={handleChange}
+                    type='text' 
+                    name='photo' 
+                />
+                <input 
+                    value={formState.price}
+                    onChange={handleChange}
+                    type='text'     
+                    name='price'    
+                />
+                <input 
+                    value={formState.sqft}
+                    onChange={handleChange}
+                    type='text'     
+                    name='sqft'     
+                />
+                <input 
+                    value={formState.bed}
+                    onChange={handleChange}
+                    type='text'     
+                    name='bed'  
+                />
+                <input 
+                    value={formState.bath}
+                    onChange={handleChange}
+                    type='text'     
+                    name='bath'     
+                />
+                <button type='submit' value='Save Listing' />
+            </form>
+        </div>
+    );
+};
+
+export default EditListing;

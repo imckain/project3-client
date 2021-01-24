@@ -9,8 +9,8 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import DashboardPage from './pages/DashboardPage';
 import ListingsPage from './pages/ListingsPage';
-// import CreateListing from './pages/CreateListingPage';
-// import EditListing from './pages/EditListingPage';
+import CreateListing from './pages/CreateListingPage';
+import EditListing from './pages/EditListingPage';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -18,7 +18,9 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App(props) {
-  const [listingsData, setListingsData] = useState({});
+  const [listingsData, setListingsData] = useState({
+
+  });
   
   useEffect(() => {
     async function getListingData() {
@@ -26,7 +28,7 @@ function App(props) {
       setListingsData(data)
     }
     getListingData()
-  }, [])
+  }, []);
 
   const [userState, setUserState] = useState({
     user: getUser()
@@ -42,7 +44,16 @@ function App(props) {
     logout();
     setUserState({ user: null });
     props.history.push('/');
-  }
+  };
+
+  async function refreshData() {
+    try {
+      const data = await getListings();
+      setListingsData(data);
+    } catch (error) {
+      console.log(error);
+    };
+  };
 
   return (
     <div className="App">
@@ -73,6 +84,7 @@ function App(props) {
                   {...props}
                   isAdmin={userState.user.isAdmin}
                   listings={listingsData}
+                  refresh={refreshData}
                 />
               :
                 <Redirect to='/login' />
@@ -83,16 +95,19 @@ function App(props) {
                 listings={listingsData}
               />
             } />
-            {/* <Route exact path='/create' render={props =>
+            <Route exact path='/create' render={props =>
               <CreateListing 
                 {...props}
+                refresh={refreshData}
               />
             } />
-            <Route exact path='/edit/:id' render={props =>
+            <Route exact path='/listings/:id' render={props =>
               <EditListing 
                 {...props}
+                listing={listingsData}
+                refresh={refreshData}
               />
-            } /> */}
+            } />
           </Switch>
         </main>
       <Footer />

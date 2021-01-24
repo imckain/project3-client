@@ -1,0 +1,25 @@
+.ListingCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    border: 3px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+}
+
+.image {
+    width: 350px;
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+}
+
+.ListingCard > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}

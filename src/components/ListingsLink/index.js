@@ -6,7 +6,7 @@ function ListingsLink(props) {
 
     return(
         <div className={styles.ListingsLinkContent}>
-            <div class={styles.Button} align="center">
+            <div className={styles.Button} align="center">
                 <Link to='/listings' className={styles.ListingsLink}><span>View Listings</span></Link>
             </div>
         </div>

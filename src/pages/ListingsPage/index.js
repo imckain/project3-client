@@ -7,10 +7,10 @@ function ListingsPage(props) {
         <div>
             <h1>listings</h1>
             {console.log(props.listings)}
-            {/* {
+            { props.listings.length > 0 &&
                 props.listings.map(listing => (
                     <ListingCard  
-                        key={listing.id}
+                        key={listing._id}
                         photo={listing.photo}
                         price={listing.price}
                         sqft={listing.sqft}
@@ -18,7 +18,7 @@ function ListingsPage(props) {
                         bath={listing.bath}
                     />
                 ))
-            } */}
+            }
         </div>
     );
 };

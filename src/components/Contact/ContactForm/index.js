@@ -9,7 +9,7 @@ function ContactForm(props) {
                     <label>First Name</label>
                     <input 
                         className={styles.ContactFormInput}
-                        value='firstName'
+                        // value='firstName'
                         name='firstName'
                         type='text'
                         placeholder='First Name'
@@ -19,7 +19,7 @@ function ContactForm(props) {
                     <label>Last Name</label>
                     <input 
                         className={styles.ContactFormInput}
-                        value='lastName'
+                        // value='lastName'
                         name='lastName'
                         type='text'
                         placeholder='Last Name'
@@ -29,7 +29,7 @@ function ContactForm(props) {
                     <label>Phone Number</label>
                     <input 
                         className={styles.ContactFormInput}
-                        value='phoneNumber'
+                        // value='phoneNumber'
                         name='phoneNumber'
                         type='text'
                         placeholder='Phone Number'
@@ -39,7 +39,7 @@ function ContactForm(props) {
                     <label>Email</label>
                     <input 
                         className={styles.ContactFormInput}
-                        value='email'
+                        // value='email'
                         name='email'
                         type='email'
                         placeholder='Email'
@@ -49,7 +49,7 @@ function ContactForm(props) {
                     <label>Message</label>
                     <input 
                         className={styles.ContactFormMessage}
-                        value='message'
+                        // value='message'
                         name='message'
                         type='text'
                         placeholder=''

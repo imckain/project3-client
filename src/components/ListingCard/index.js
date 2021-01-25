@@ -4,7 +4,9 @@ function ListingCard(props) {
 
     return(
         <div className={styles.ListingCard} >
-            <img src={props.photo} alt="home" className={styles.image} />
+            <div className={styles.imageContainer}>
+                <img src={props.photo} alt="home" className={styles.image} />
+            </div>
             <div>
                 <span>Price: ${props.price} </span>
                 <span>Square Footage: {props.sqft} </span>

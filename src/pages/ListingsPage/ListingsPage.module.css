@@ -14,12 +14,19 @@
     font-size: 60px;
 }
 
+.ListingsPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
 .ListingsPageMain {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-image: url('./images/bkg2.jpg');
+    height: 80vh;
+    background-image: url('./images/bkg1.jpg');
     background-size: contain;
     background-repeat: repeat-x;
     background-position: 50% 50%;
@@ -29,6 +36,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 80%;
     height: 80vh;
     background-color: white;
@@ -37,5 +46,10 @@
 }
 
 .ListingCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: fit-content;
     margin: 10px;
 }

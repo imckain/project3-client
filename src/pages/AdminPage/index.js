@@ -70,7 +70,7 @@ function AdminPage(props) {
                                     <Link 
                                         className={styles.NavLinkEditListing} 
                                         to={{
-                                            pathname: `/listings/${listing._id}`,
+                                            pathname: `/listings/edit/${listing._id}`,
                                             listingProps:{
                                                 id: listing._id
                                             }

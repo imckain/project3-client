@@ -1,0 +1,25 @@
+.NavLinkListings {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-size: large;
+    font-weight: 700;
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: none;
+}
+.NavLinkListings:hover {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.NavLinkListings:active {
+    text-decoration: none;
+    color: white;
+}
+.NavLinkListings:visited {
+    text-decoration: none;
+    color: white;
+}

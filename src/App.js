@@ -10,6 +10,7 @@ import SignupPage from './pages/SignupPage';
 import DashboardPage from './pages/DashboardPage';
 import ListingsPage from './pages/ListingsPage';
 import CreateListing from './pages/CreateListingPage';
+import ShowPage from './pages/ShowPage';
 import EditListing from './pages/EditListingPage';
 
 import Header from './components/Header';
@@ -96,6 +97,12 @@ function App(props) {
                 listings={listingsData}
               />
             } />
+            <Route exact path='/listings/:id' render={props =>
+              <ShowPage 
+                {...props}
+                listing={listingsData}
+              />
+            } />
             <Route exact path='/create' render={props =>
               userState.user ?
                 <CreateListing 
@@ -105,7 +112,7 @@ function App(props) {
               :
                 <Redirect to='/login' />
             } />
-            <Route exact path='/listings/:id' render={props =>
+            <Route exact path='/listings/edit/:id' render={props =>
               userState.user ?
                 <EditListing 
                   {...props}

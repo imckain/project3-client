@@ -1,16 +1,33 @@
 /* eslint-disable no-unused-vars */
 import styles from './EditListingPage.module.css';
 import { useState } from 'react';
-import { getListings, updateListing } from '../../services/listingService';
+import { updateListing } from '../../services/listingService';
 
 function EditListing(props) {
     const [formState, setFormState] = useState({
         photo: '',
-        address: '',
+        address: {
+            street: '',
+            city: '',
+            state: '',
+            zip: '',
+        },
         price: '',
         sqft: '',
         bed: '',
         bath: '',
+        additionalDetails: {
+            ac: '',
+            laundry: '',
+            garage: '',
+            offStreetParking: '',
+            fireplace: '',
+            pool: '',
+            hardwoodFloors: '',
+            sewer: '',
+            schoolsNearby: '',
+            parksNearby: '',
+        }
     });
 
     function handleChange(event) {

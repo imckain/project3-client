@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { getListings } from '../../services/listingService';
 import styles from './ListingsPage.module.css';
 
@@ -19,22 +20,30 @@ function ListingsPage(props) {
 
     return(
         <div className={styles.ListingsPage}>
-            <div className={styles.ListingsPageHeader}>
+            {/* <div className={styles.ListingsPageHeader}>
                 <h1>L I S T I N G S</h1>
-            </div>
+            </div> */}
             <div className={styles.ListingsPageMain}>
                 <div className={styles.ListingsPageContent}>
                     { listingsData.length > 0 &&
                         listingsData.map(listing => (
                             <div key={listing._id} className={styles.ListingCard}>
-                                <ListingCard  
-                                    key={listing._id}
-                                    photo={listing.photo}
-                                    price={listing.price}
-                                    sqft={listing.sqft}
-                                    bed={listing.bed}
-                                    bath={listing.bath}
-                                />
+                                <Link to={{
+                                        pathname: `/listings/${listing._id}`,
+                                        listingProps: {
+                                            id: listing._id
+                                        }
+                                    }}>
+                                    <ListingCard  
+                                        key={listing._id}
+                                        photo={listing.photo}
+                                        address={listing.address}
+                                        price={listing.price}
+                                        sqft={listing.sqft}
+                                        bed={listing.bed}
+                                        bath={listing.bath}
+                                    />
+                                </Link>
                             </div>
                         ))
                     }

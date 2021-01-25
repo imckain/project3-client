@@ -12,14 +12,14 @@
 }
 .NavLinkListings:hover {
     text-decoration: none;
-    color: white;
+    color: var(--accent-color);
     cursor: pointer;
 }
 .NavLinkListings:active {
     text-decoration: none;
-    color: white;
+    color: var(--accent-color);
 }
 .NavLinkListings:visited {
     text-decoration: none;
-    color: white;
+    color: var(--accent-color);
 }

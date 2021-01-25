@@ -39,9 +39,17 @@ function updateListing(listing, id) {
     }).then(getListings());
 };
 
-// function addFavorite() {
+function addFavorite() {
+    return fetch(BASE_URL + '/favorites', {
+        method: 'POST',
+    }).then(res => res.json());
+}
 
-// }
+function getFavorite() {
+    return fetch(BASE_URL + '/favorites', {
+        method: 'GET',
+    }).then(res => res.json());
+}
 
 export {
     getListings, 

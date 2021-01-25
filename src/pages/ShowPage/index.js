@@ -22,7 +22,7 @@ function ShowPage(props) {
     useEffect(() => {
         async function getListingData() {
           const data = await showListing(props.location.listingProps.id);
-          console.log('data: ', data);
+          console.log('data from use effect: ', data);
           setListingsData(data)
         }
         getListingData()
@@ -33,8 +33,9 @@ function ShowPage(props) {
             <div>
                 <Link to="/listings" className={styles.NavLinkListings}>A L L &nbsp;&nbsp; L I S T I N G S</Link>
                 <h1>Show Page Loaded</h1>
-                {console.log(listingsData)}
-                {console.log(props.location.listingProps.id)}
+                {console.log("data from div: ",listingsData)}
+                {console.log("match id: ", props.match.params.id)}
+                {console.log("location id: ", props.location.listingProps.id)}
             </div>
         </div>
     );

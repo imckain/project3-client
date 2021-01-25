@@ -62,68 +62,68 @@ function App(props) {
         handleLogout={handleLogout} 
         user={userState.user}
       />
-        <main>
-          <Switch>
-            <Route exact path='/' render={props =>
-              <HomePage />
-            } />
-            <Route exact path='/login' render={props =>
-              <LoginPage 
-                {...props} 
-                handleSignupOrLogin={handleSignupOrLogin} 
-              />
-            } />
-            <Route exact path='/signup' render={props =>
-              <SignupPage 
-                {...props} 
-                handleSignupOrLogin={handleSignupOrLogin} 
-              />
-            } />
-            <Route exact path='/dashboard' render={props =>
-              userState.user ?
-                <DashboardPage 
-                  {...props}
-                  user={userState.user}
-                  isAdmin={userState.user.isAdmin}
-                  listings={listingsData}
-                  refresh={refreshData}
-                />
-              :
-                <Redirect to='/login' />
-            } />
-            <Route exact path='/listings' render={props =>
-              <ListingsPage 
+      <main>
+        <Switch>
+          <Route exact path='/' render={props =>
+            <HomePage />
+          } />
+          <Route exact path='/login' render={props =>
+            <LoginPage 
+              {...props} 
+              handleSignupOrLogin={handleSignupOrLogin} 
+            />
+          } />
+          <Route exact path='/signup' render={props =>
+            <SignupPage 
+              {...props} 
+              handleSignupOrLogin={handleSignupOrLogin} 
+            />
+          } />
+          <Route exact path='/dashboard' render={props =>
+            userState.user ?
+              <DashboardPage 
                 {...props}
+                user={userState.user}
+                isAdmin={userState.user.isAdmin}
                 listings={listingsData}
+                refresh={refreshData}
               />
-            } />
-            <Route exact path='/listings/:id' render={props =>
-              <ShowPage 
+            :
+              <Redirect to='/login' />
+          } />
+          <Route exact path='/listings' render={props =>
+            <ListingsPage 
+              {...props}
+              listings={listingsData}
+            />
+          } />
+          <Route exact path='/listings/:id' render={props =>
+            <ShowPage 
+              {...props}
+              listing={listingsData}
+            />
+          } />
+          <Route exact path='/create' render={props =>
+            userState.user ?
+              <CreateListing 
+                {...props}
+                refresh={refreshData}
+              />
+            :
+              <Redirect to='/login' />
+          } />
+          <Route exact path='/listings/edit/:id' render={props =>
+            userState.user ?
+              <EditListing 
                 {...props}
                 listing={listingsData}
+                refresh={refreshData}
               />
-            } />
-            <Route exact path='/create' render={props =>
-              userState.user ?
-                <CreateListing 
-                  {...props}
-                  refresh={refreshData}
-                />
-              :
-                <Redirect to='/login' />
-            } />
-            <Route exact path='/listings/edit/:id' render={props =>
-              userState.user ?
-                <EditListing 
-                  {...props}
-                  listing={listingsData}
-                  refresh={refreshData}
-                />
-              :
-                <Redirect to='/login' />
-            } />
-          </Switch>
-        </main>
+            :
+              <Redirect to='/login' />
+          } />
+        </Switch>
+      </main>
       <Footer />
     </div>
   );

@@ -36,12 +36,7 @@ function ListingsPage(props) {
                                     }}>
                                     <ListingCard  
                                         key={listing._id}
-                                        photo={listing.photo}
-                                        address={listing.address}
-                                        price={listing.price}
-                                        sqft={listing.sqft}
-                                        bed={listing.bed}
-                                        bath={listing.bath}
+                                        listing={listing}
                                     />
                                 </Link>
                             </div>

@@ -59,11 +59,13 @@ function AdminPage(props) {
                                     <div>
                                         <ListingCard 
                                             className={styles.ListingCard}
-                                            photo={listing.photo}
-                                            price={listing.price}
-                                            sqft={listing.sqft}
-                                            bed={listing.bed}
-                                            bath={listing.bath}
+                                            // photo={listing.photo}
+                                            // address={listing.street}
+                                            // price={listing.price}
+                                            // sqft={listing.sqft}
+                                            // bed={listing.bed}
+                                            // bath={listing.bath}
+                                            listing={listing}
                                         />
                                         <button type='submit' onClick={() => handleDeleteAndRefresh(listing._id)} >X</button>
                                     </div>

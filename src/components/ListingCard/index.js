@@ -5,13 +5,14 @@ function ListingCard(props) {
     return(
         <div className={styles.ListingCard} >
             <div className={styles.imageContainer}>
-                <img src={props.photo} alt="home" className={styles.image} />
+                <img src={props.listing.photo} alt="home" className={styles.image} />
             </div>
             <div>
-                <span>Price: ${props.price} </span>
-                <span>Square Footage: {props.sqft} </span>
-                <span>Bed: {props.bed} </span>
-                <span>Bath: {props.bath} </span>
+                <span className={styles.Street}>{props.listing.address.street} </span>
+                <span>Price: ${props.listing.price} </span>
+                <span>Square Footage: {props.listing.sqft} </span>
+                <span>Bed: {props.listing.bed} </span>
+                <span>Bath: {props.listing.bath} </span>
             </div>
         </div>
     );

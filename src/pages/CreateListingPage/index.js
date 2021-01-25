@@ -31,11 +31,18 @@ function CreateListing(props) {
     });
 
     function handleChange(event) {
-        setFormState(prevState => ({
-            ...prevState,
+        setFormState({
+            ...formState,
             [event.target.name]: event.target.value
-        }));
+        });
     };
+
+    // function handleChange(event) {
+    //     setFormState(prevState => ({
+    //         ...prevState,
+    //         [event.target.name]: event.target.value
+    //     }));
+    // };
 
     async function handleSubmit(event) {
         try {
@@ -72,7 +79,7 @@ function CreateListing(props) {
                             <div className={styles.CreateFormAddressItem}>
                                 <input 
                                     className={styles.CreateFormInput}
-                                    value={formState.address.street}
+                                    value={formState.street}
                                     onChange={handleChange}
                                     type='text' 
                                     name='street' 
@@ -80,7 +87,7 @@ function CreateListing(props) {
                                 />
                                 <input
                                     className={styles.CreateFormInput}
-                                    value={formState.address.city}
+                                    value={formState.city}
                                     onChange={handleChange}
                                     type='text' 
                                     name='city' 
@@ -88,7 +95,7 @@ function CreateListing(props) {
                                 />
                                 <input
                                     className={styles.CreateFormInput}
-                                    value={formState.address.state}
+                                    value={formState.state}
                                     onChange={handleChange}
                                     type='text' 
                                     name='state' 
@@ -96,7 +103,7 @@ function CreateListing(props) {
                                 />
                                 <input
                                     className={styles.CreateFormInput}
-                                    value={formState.address.zip}
+                                    value={formState.zip}
                                     onChange={handleChange}
                                     type='text' 
                                     name='zip' 
@@ -150,7 +157,7 @@ function CreateListing(props) {
                                 <label>HVAC: </label>
                                 <input 
                                     className={styles.CreateFormCheckbox}
-                                    value={formState.additionalDetails.ac}
+                                    value={formState.ac}
                                     onChange={handleChange}
                                     type='checkbox'     
                                     name='ac'     
@@ -160,7 +167,7 @@ function CreateListing(props) {
                                 <label>Laundry Hookup: </label>
                                 <input 
                                     className={styles.CreateFormCheckbox}
-                                    value={formState.additionalDetails.laundry}
+                                    value={formState.laundry}
                                     onChange={handleChange}
                                     type='checkbox'     
                                     name='laundry'     
@@ -170,7 +177,7 @@ function CreateListing(props) {
                                 <label>Garage: </label>
                                 <input 
                                     className={styles.CreateFormCheckbox}
-                                    value={formState.additionalDetails.garage}
+                                    value={formState.garage}
                                     onChange={handleChange}
                                     type='checkbox'     
                                     name='garage'     
@@ -180,7 +187,7 @@ function CreateListing(props) {
                                 <label>Off-Street Parking: </label>
                                 <input 
                                     className={styles.CreateFormCheckbox}
-                                    value={formState.additionalDetails.offStreetParking}
+                                    value={formState.offStreetParking}
                                     onChange={handleChange}
                                     type='checkbox'     
                                     name='offStreetParking'     
@@ -190,7 +197,7 @@ function CreateListing(props) {
                                 <label>Fireplace: </label>
                                 <input 
                                     className={styles.CreateFormCheckbox}
-                                    value={formState.additionalDetails.fireplace}
+                                    value={formState.fireplace}
                                     onChange={handleChange}
                                     type='checkbox'     
                                     name='fireplace'     
@@ -200,7 +207,7 @@ function CreateListing(props) {
                                 <label>Pool: </label>
                                 <input 
                                     className={styles.CreateFormCheckbox}
-                                    value={formState.additionalDetails.pool}
+                                    value={formState.pool}
                                     onChange={handleChange}
                                     type='checkbox'     
                                     name='pool'     
@@ -210,7 +217,7 @@ function CreateListing(props) {
                                 <label>Hardwood Floors: </label>
                                 <input 
                                     className={styles.CreateFormCheckbox}
-                                    value={formState.additionalDetails.hardwoodFloors}
+                                    value={formState.hardwoodFloors}
                                     onChange={handleChange}
                                     type='checkbox'     
                                     name='hardwoodFloors'     
@@ -220,7 +227,7 @@ function CreateListing(props) {
                                 <label>Sewer: </label>
                                 <input 
                                     className={styles.CreateFormCheckbox}
-                                    value={formState.additionalDetails.sewer}
+                                    value={formState.sewer}
                                     onChange={handleChange}
                                     type='checkbox'     
                                     name='sewer'     
@@ -230,7 +237,7 @@ function CreateListing(props) {
                                 <label>Schools Nearby: </label>
                                 <input 
                                     className={styles.CreateFormCheckbox}
-                                    value={formState.additionalDetails.schoolsNearby}
+                                    value={formState.schoolsNearby}
                                     onChange={handleChange}
                                     type='checkbox' 
                                     name='schoolsNearby'     
@@ -240,7 +247,7 @@ function CreateListing(props) {
                                 <label>Parks/Trails Nearby: </label>
                                 <input 
                                     className={styles.CreateFormCheckbox}
-                                    value={formState.additionalDetails.parksNearby}
+                                    value={formState.parksNearby}
                                     onChange={handleChange}
                                     type='checkbox'     
                                     name='parksNearby'     

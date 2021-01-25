@@ -13,7 +13,7 @@ function HomePage(props) {
                     />
                 </div>
             </div>
-            <div>
+            <div className={styles.Contact}>
                 <Contact />
             </div>
         </div>

@@ -27,7 +27,7 @@ function showListing(id) {
     fetch(BASE_URL + id, {
         method: 'GET',
     }).then(res => res.json()).catch(err => console.log(err));
-}
+};
 
 function updateListing(listing, id) {
     fetch(BASE_URL + 'edit/' + id, {
@@ -40,17 +40,17 @@ function updateListing(listing, id) {
     }).then(getListings());
 };
 
-function addFavorite() {
-    return fetch(BASE_URL + '/favorites', {
-        method: 'POST',
-    }).then(res => res.json());
-}
+// function addFavorite() {
+//     return fetch(BASE_URL + '/favorites', {
+//         method: 'POST',
+//     }).then(res => res.json());
+// };
 
-function getFavorite() {
-    return fetch(BASE_URL + '/favorites', {
-        method: 'GET',
-    }).then(res => res.json());
-}
+// function getFavorite() {
+//     return fetch(BASE_URL + '/favorites', {
+//         method: 'GET',
+//     }).then(res => res.json());
+// };
 
 export {
     getListings, 

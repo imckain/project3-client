@@ -26,7 +26,7 @@ Features:
 
 ---
 
-## ERD ![Image](public/images/database.png)
+## ERD ![Image](public/images/database.png =27x)
 
 ![Image](https://i.imgur.com/AjORm4L.png)
 
@@ -46,13 +46,13 @@ Features:
 
 ## Technologies Used 💻
 
-- ![Image](public/images/react.png) React
-- ![Image](public/images/mongo_db.png) MongoDB & Mongoose
-- ![Image](public/images/html5.png) HTML 5 & ![Image](public/images/css.jpg) CSS
-- ![Image](public/images/javascript.png) JavaScript
-- ![Image](public/images/nodejs.png) NodeJS
-- ![Image](public/images/heroku.png) Heroku
-- ![Image](public/images/netlify.png) Netlify
+- ![Image](public/images/react.png =27x) React
+- ![Image](public/images/mongo_db.png =27x) MongoDB & Mongoose
+- ![Image](public/images/html5.png =27x) HTML 5 & ![Image](public/images/css.jpg =27x) CSS
+- ![Image](public/images/javascript.png =27x) JavaScript
+- ![Image](public/images/nodejs.png =27x) NodeJS
+- ![Image](public/images/heroku.png =27x) Heroku
+- ![Image](public/images/netlify.png =27x) Netlify
 - 🔐 OAuth2
 
 ---

@@ -31,11 +31,18 @@ function EditListing(props) {
     });
 
     function handleChange(event) {
-        setFormState(prevState => ({
-            ...prevState,
+        setFormState({
+            ...formState,
             [event.target.name]: event.target.value
-        }));
+        });
     };
+
+    // function handleChange(event) {
+    //     setFormState(prevState => ({
+    //         ...prevState,
+    //         [event.target.name]: event.target.value
+    //     }));
+    // };
 
     async function handleSubmit(event) {
         try {
@@ -72,7 +79,7 @@ function EditListing(props) {
                             <div className={styles.EditFormAddressItem}>
                                 <input 
                                     className={styles.EditFormInput}
-                                    value={formState.address.street}
+                                    value={formState.street}
                                     onChange={handleChange}
                                     type='text' 
                                     name='street' 
@@ -80,7 +87,7 @@ function EditListing(props) {
                                 />
                                 <input
                                     className={styles.EditFormInput}
-                                    value={formState.address.city}
+                                    value={formState.city}
                                     onChange={handleChange}
                                     type='text' 
                                     name='city' 
@@ -88,7 +95,7 @@ function EditListing(props) {
                                 />
                                 <input
                                     className={styles.EditFormInput}
-                                    value={formState.address.state}
+                                    value={formState.state}
                                     onChange={handleChange}
                                     type='text' 
                                     name='city' 
@@ -96,7 +103,7 @@ function EditListing(props) {
                                 />
                                 <input
                                     className={styles.EditFormInput}
-                                    value={formState.address.zip}
+                                    value={formState.zip}
                                     onChange={handleChange}
                                     type='text' 
                                     name='zip' 

@@ -17,7 +17,6 @@
     width: 260px;
     height: 300px;
     object-fit: cover;
-    /* border: 2px solid var(--accent-color); */
     border-radius: 10px;
 }
 

@@ -37,13 +37,6 @@ function CreateListing(props) {
         });
     };
 
-    // function handleChange(event) {
-    //     setFormState(prevState => ({
-    //         ...prevState,
-    //         [event.target.name]: event.target.value
-    //     }));
-    // };
-
     async function handleSubmit(event) {
         try {
             event.preventDefault();

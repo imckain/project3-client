@@ -20,9 +20,6 @@ function ListingsPage(props) {
 
     return(
         <div className={styles.ListingsPage}>
-            {/* <div className={styles.ListingsPageHeader}>
-                <h1>L I S T I N G S</h1>
-            </div> */}
             <div className={styles.ListingsPageMain}>
                 <div className={styles.ListingsPageContent}>
                     { listingsData.length > 0 &&
@@ -31,7 +28,8 @@ function ListingsPage(props) {
                                 <Link to={{
                                         pathname: `/listings/${listing._id}`,
                                         listingProps: {
-                                            id: listing._id
+                                            id: listing._id,
+                                            listing: listing
                                         }
                                     }}>
                                     <ListingCard  

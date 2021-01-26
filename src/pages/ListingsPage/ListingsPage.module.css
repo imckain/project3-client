@@ -26,11 +26,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
-    background-image: url('./images/bkg1.jpg');
-    background-size: contain;
-    background-repeat: repeat-x;
-    background-position: 50% 50%;
+    background-color: #34334283;
 }
 
 .ListingsPageContent {
@@ -39,11 +35,12 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    width: 80%;
-    height: 100vh;
+    width: 90%;
+    height: 100%;
     background-color: white;
     border-left: 4px solid var(--accent-color);
     border-right: 4px solid var(--accent-color);
+    padding-bottom: 30px;
 }
 
 .ListingCard {

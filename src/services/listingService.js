@@ -1,5 +1,5 @@
-// const BASE_URL = 'http://localhost:3001/api/listings/';
-const BASE_URL = 'https://project-3-backend-api.herokuapp.com/api/listings/';
+// const BASE_URL = 'http://localhost:3001/api/listings/'; // Dev URL
+const BASE_URL = 'https://project-3-backend-api.herokuapp.com/api/listings/'; // Deployed URL
 
 const getListings = () => 
     fetch(BASE_URL, {
@@ -26,7 +26,7 @@ function deleteListing(id) {
 function showListing(id) {
     fetch(BASE_URL + id, {
         method: 'GET',
-    }).then(res => res.json()).catch(err => console.log(err));
+    }).then(res => res.json()).then(data => console.log(data)).catch(err => console.log(err));
 };
 
 function updateListing(listing, id) {

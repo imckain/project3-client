@@ -50,7 +50,7 @@ Features:
 
 - <img src="public/images/react.png" width="27"> React
 - <img src="public/images/mongo_db.png" width="27"> MongoDB & Mongoose
-- <img src="public/images/html5.png" width="27"> HTML 5 & <img src="public/images/css.jpg" width="27"> CSS
+- <img src="public/images/html5.png" width="27"> HTML 5 & CSS
 - <img src="public/images/javascript.png" width="27"> JavaScript
 - <img src="public/images/nodejs.png" width="27"> NodeJS
 - <img src="public/images/heroku.png" width="27"> Heroku

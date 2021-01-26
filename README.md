@@ -14,31 +14,46 @@ Features:
 
 ---
 
-## Wireframe :wires:
+## Wireframes 🔲
 
+![Image](https://i.imgur.com/D214QkK.png)
+
+![Image](https://i.imgur.com/klc1iun.png)
+
+![Image](https://i.imgur.com/BbgE7tw.png)
+
+![Image](https://i.imgur.com/xyMIqXb.png)
 
 ---
 
-## ERD :gear:
+## ERD ![Image](public/images/database.png)
 
+![Image](https://i.imgur.com/AjORm4L.png)
 
 ---
 
 ## Screenshots 📸
 
+![Image](https://i.imgur.com/7o9gifP.png)
+
+![Image](https://i.imgur.com/y9Asetx.jpg)
+
+![Image](https://i.imgur.com/arEVxhM.png)
+
+![Image](https://i.imgur.com/G0CdxOQ.jpg)
 
 ---
 
 ## Technologies Used 💻
 
-- :react: React
-- :mongo-db-transparent: MongoDB & Mongoose
-- :htmllogo::css: HTML 5 & CSS
-- :javascript: JavaScript
-- :nodejs: NodeJS
-- :heroku: Heroku
-- :netlify: Netlify
-- :closed_lock_with_key: OAuth2
+- ![Image](public/images/react.png) React
+- ![Image](public/images/mongo_db.png) MongoDB & Mongoose
+- ![Image](public/images/html5.png) HTML 5 & ![Image](public/images/css.jpg) CSS
+- ![Image](public/images/javascript.png) JavaScript
+- ![Image](public/images/nodejs.png) NodeJS
+- ![Image](public/images/heroku.png) Heroku
+- ![Image](public/images/netlify.png) Netlify
+- 🔐 OAuth2
 
 ---
 

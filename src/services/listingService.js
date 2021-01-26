@@ -1,4 +1,5 @@
-const BASE_URL = 'http://localhost:3001/api/listings/';
+// const BASE_URL = 'http://localhost:3001/api/listings/';
+const BASE_URL = 'https://project-3-backend-api.herokuapp.com/api/listings/';
 
 const getListings = () => 
     fetch(BASE_URL, {
